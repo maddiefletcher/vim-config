@@ -51,6 +51,27 @@ A large number of the useful commands in Vim start with the 'leader' key, so Vim
 
 For this config, the leader is the comma button. This is shown in the following notes as `<space>`
 
+## Using Autocompletion & Snippets
+When typing a word, Autocompletion examples will pop up.
+`<tab>` to move through the list (`<shift-tab>` to move backwards)
+`<space>` will leave the selected completion in place and add a space so you can continue typing.
+If the completion is a snippet (a short template with sections to fill out), you can press `<ctrl x>` to insert it and then use `<tab>` to fill in the template slots.
+(ProTip: Map you Caps Lock to <ctrl> for more comfortable completions)
+
+## Troubleshooting
+#### YouCompleteMe needs to be compiled
+Errors about YouCompleteMe needing compiling are usually because the automatic compilation has failed for some reason.
+You can manually trigger the compilation with the following:
+
+```
+cd ~/.vim/plugged/YouCompleteMe/
+./install.sh
+```
+
+If this succeeds, then great, you're good to go!
+Otherwise, it's off to the official [YouCompleteMe docs](https://github.com/Valloric/YouCompleteMe) to figure out what your machine needs to compile it.
+
+
 ## Plugins - all the goodies!
 See the plugins' web pages for more information. The keybindings listed are mostly
 just those defined or overridden locally, not the ones provided by default.
@@ -271,6 +292,14 @@ Keys               | Function
 -------------------|-------------------
   `<space>` `]`    | toggle the sidebar
 
+### UltiSnips
+Snippet expansion ([more](https://github.com/SirVer/ultisnips))
+
+Keys                | Function
+------------------- | --------------------
+  `<Ctrl>``x`       | If the selection is a snippet, expand the snippet
+  `<tab>`           | Move to the next part of the snippet which can be edited
+
 
 ### unimpaired
 Pairs of handy bracket maps ([more](http://www.vim.org/scripts/script.php?script_id=1590))
@@ -374,6 +403,17 @@ Keys               | Function
 -------------------|--------------------------------------------------------------
   `<space>` `p`    | Swap the last paste for the next item in the yank stack
   `<space>` `P`    | Swap the last paste for the previous item in the yank stack
+
+
+### YouCompleteMe
+Auto completion popups as you type ([more](https://github.com/Valloric/YouCompleteMe))
+
+Keys                | Function
+------------------- | --------------------
+`<tab>`           | Select the next auto complete option
+`<space>`         | Use selected completion and move on
+`<ESC>`           | Cancel completion (remove selected)
+`<Ctrl>``x`       | If the selection is a snippet, expand the snippetCancel completion (remove selected)
 
 
 ### ZoomWin
