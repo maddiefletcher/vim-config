@@ -136,6 +136,7 @@ set tabstop=2
 set timeoutlen=500                      " Milliseconds to wait for another key press when evaluating commands
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
+set mouse=a
 
 " -----------------------------------
 " Setup file wildcard ignored names
@@ -398,7 +399,7 @@ let g:startify_custom_header = [
 
 let g:startify_custom_footer = [
       \'',
-      \"   Adam's Vim Config: https://github.com/adamwhittingham/vim-config",
+      \"   Mark's Vim Config: https://github.com/markpfletcher/vim-config",
       \"   Vim is charityware. Please read ':help uganda'",
       \]
 
@@ -425,8 +426,12 @@ let g:startify_bookmarks = [
 " Stop things splitting with Startify and replace it instead
 autocmd User Startified setlocal buftype=
 
+" colorscheme railscasts
+" colorscheme solarized
 " Setup the projector toggle plugin
 let g:default_colorscheme = 'adCode'
+" let g:default_colorscheme = 'railscasts'
+" let g:default_colorscheme = 'solarized'
 let g:projector_colorscheme = 'mac-classic'
 
 " Setup Font
@@ -474,10 +479,7 @@ let g:splitjoin_align = 1
 " Setup the status bar
 " ----------------------------------------------
 
-let g:airline_left_sep = ""
-let g:airline_left_alt_sep = ""
-let g:airline_right_sep = ""
-let g:airline_right_alt_sep = ""
+let g:airline_powerline_fonts = 1
 let g:airline_section_z = '%c, %l/%L'
 
 let g:airline#extensions#whitespace#enabled = 0
@@ -485,7 +487,9 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#tagbar#enabled = 0
 
-let g:airline_theme = "kalisi"
+let g:airline_theme = "murmur"
+
+let g:airline#extensions#tabline#enabled = 1
 
 " ----------------------------------------------
 " Setup highlighting
