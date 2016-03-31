@@ -137,6 +137,7 @@ set timeoutlen=500                      " Milliseconds to wait for another key p
 set wildmode=list:longest               " Shell-like behaviour for command autocompletion
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
 set mouse=a
+set clipboard=unnamed                   " Use the system clipboard
 
 " -----------------------------------
 " Setup file wildcard ignored names
