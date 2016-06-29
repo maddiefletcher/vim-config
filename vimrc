@@ -82,6 +82,12 @@ Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
 Plug 'vim-coffee-script',              {'for': 'coffee'}
 Plug 'moll/vim-node'
 
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" Groovy
+Plug 'vim-scripts/groovy.vim',         {'for': 'groovy'}
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
@@ -374,6 +380,8 @@ au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.jade.html set filetype=jade
 au BufRead,BufNewFile *.palette set filetype=ruby
 au BufNewFile,BufRead *.hl7 set filetype=hl7
+au BufRead,BufNewFile *.groovy set filetype=groovy
+au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 
 " ----------------------------------------------
 " Setup Look & Feel
@@ -782,3 +790,6 @@ endif
 
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
+
+" Enable EditorConfig
+let g:EditorConfig_core_mode = 'external_command'
