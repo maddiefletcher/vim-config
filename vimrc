@@ -125,7 +125,7 @@ set expandtab                           " Convert tabs to spaces AS IS RIGHT AND
 set hidden                              " Allow buffer switching without saving
 set history=1000                        " Remember a decent way back
 set laststatus=2                        " Always show status line.
-set listchars=nbsp:█,eol:¶,tab:>-,extends:»,precedes:«,trail:•
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 set mousehide                           " Hide the mouse cursor when typing
 set nofoldenable                        " Disable all folding of content
 set nowrap                              " Line wrapping off
@@ -166,8 +166,6 @@ set wildignore+=node_modules/*
 
 " Disable temp and backup files
 set wildignore+=*.swp,*.swo,*~,._*
-
-call yankstack#setup()
 
 " -----------------------------------
 " GUI Vim Options
@@ -390,7 +388,6 @@ au BufRead,BufNewFile Jenkinsfile set filetype=groovy
 " Show lines which have been break-indented with a special character
 if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
-  set showbreak=↪
 endif
 
 " Setup vim-startify's start screen
