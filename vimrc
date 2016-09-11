@@ -125,6 +125,8 @@ set expandtab                           " Convert tabs to spaces AS IS RIGHT AND
 set hidden                              " Allow buffer switching without saving
 set history=1000                        " Remember a decent way back
 set laststatus=2                        " Always show status line.
+scriptencoding utf-8
+set encoding=utf-8
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 set mousehide                           " Hide the mouse cursor when typing
 set nofoldenable                        " Disable all folding of content
