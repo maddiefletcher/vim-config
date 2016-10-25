@@ -88,6 +88,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Groovy
 Plug 'vim-scripts/groovy.vim',         {'for': 'groovy'}
 
+" Dash integration
+Plug 'rizzatti/dash.vim'
+
 " Varnish VCL
 Plug 'ClockworkNet/vim-vcl'
 
