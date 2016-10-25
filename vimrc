@@ -88,6 +88,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Groovy
 Plug 'vim-scripts/groovy.vim',         {'for': 'groovy'}
 
+" Varnish VCL
+Plug 'ClockworkNet/vim-vcl'
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
