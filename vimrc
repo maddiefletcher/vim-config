@@ -110,6 +110,8 @@ let mapleader = ","
 nmap <space> <leader>
 nmap <space><space> <leader><leader>
 
+set t_Co=256
+let g:solarized_termcolors=256
 colorscheme adCode
 
 set autoindent                          " Automatically indent based on syntax detection
