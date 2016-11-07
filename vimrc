@@ -88,6 +88,12 @@ Plug 'editorconfig/editorconfig-vim'
 " Groovy
 Plug 'vim-scripts/groovy.vim',         {'for': 'groovy'}
 
+" Dash integration
+Plug 'rizzatti/dash.vim'
+
+" Varnish VCL
+Plug 'ClockworkNet/vim-vcl'
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
