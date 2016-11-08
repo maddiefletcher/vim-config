@@ -10,6 +10,7 @@ Plug 'tpope/vim-repeat'                      " Make many more operations repeata
 " UI
 Plug 'AdamWhittingham/projector_mode'        " Toggle between colourschemes for work & projection or screensharing
 Plug 'airblade/vim-gitgutter'                " Show the column of changes to the file against git
+Plug 'tpope/vim-fugitive'                    " Awesome git plugin
 Plug 'vim-airline/vim-airline'               " Add a nicer status line
 Plug 'vim-airline/vim-airline-themes'        " Themes for Airline
 Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
@@ -154,6 +155,7 @@ set wildmode=list:longest               " Shell-like behaviour for command autoc
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
 set mouse=a
 set clipboard=unnamed                   " Use the system clipboard
+set ttymouse=xterm2
 
 " -----------------------------------
 " Setup file wildcard ignored names
