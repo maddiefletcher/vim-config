@@ -48,6 +48,7 @@ Plug 'scrooloose/nerdcommenter'              " Quick toggle for code commenting
 Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
 Plug 'tpope/vim-speeddating'                 " Extend vim increment/decrement to work on dates
 Plug 'tpope/vim-surround'                    " Quick editing or insertion for surrounding characters (ie. quickly add quotes around a line)
+Plug 'tpope/vim-commentary'                  " Comment out lines for common file types
 
 " Snippets and autocomplete
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
@@ -68,6 +69,7 @@ Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
 Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
 Plug 'vroom',                          {'for': 'ruby'}
+Plug 'tpope/vim-cucumber'
 
 " CSS & HTML
 Plug 'cakebaker/scss-syntax.vim',      {'for': 'css'}
