@@ -254,7 +254,7 @@ nmap <leader>gt :GitGutterToggle<CR>
 "  <Leader>gh highlight changed lines
 nmap <leader>gh :GitGutterLineHighlightsToggle<CR>
 
-" <Leager>ga to add the current git hunk to git staging
+" <Leader>ga to add the current git hunk to git staging
 nmap <Leader>ga <Plug>GitGutterStageHunk
 
 " <Leader>gu to undo the current changed hunk
