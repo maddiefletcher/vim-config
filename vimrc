@@ -97,6 +97,9 @@ Plug 'rizzatti/dash.vim'
 " Varnish VCL
 Plug 'ClockworkNet/vim-vcl'
 
+" PlantUML
+Plug 'aklt/plantuml-syntax'
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
