@@ -407,6 +407,8 @@ if v:version > 704 || v:version == 704 && has("patch338")
   set breakindent
 endif
 
+set synmaxcol=200
+
 " Setup vim-startify's start screen
 let g:startify_change_to_vcs_root = 1
 let g:startify_files_number = 6
