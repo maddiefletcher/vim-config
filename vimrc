@@ -100,6 +100,9 @@ Plug 'ClockworkNet/vim-vcl'
 " PlantUML
 Plug 'aklt/plantuml-syntax'
 
+" API Blueprint
+Plug 'kylef/apiblueprint.vim'
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
