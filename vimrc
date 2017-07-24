@@ -103,6 +103,9 @@ Plug 'aklt/plantuml-syntax'
 " API Blueprint
 Plug 'kylef/apiblueprint.vim'
 
+" Fun
+Plug 'johngrib/vim-game-code-break'
+
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
   source ~/.vim.plugins.local
