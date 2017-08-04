@@ -403,6 +403,7 @@ au BufRead,BufNewFile *.palette set filetype=ruby
 au BufNewFile,BufRead *.hl7 set filetype=hl7
 au BufRead,BufNewFile *.groovy set filetype=groovy
 au BufRead,BufNewFile Jenkinsfile set filetype=groovy
+au BufRead,BufNewFile *.conf set filetype=dosini
 
 " ----------------------------------------------
 " Setup Look & Feel
