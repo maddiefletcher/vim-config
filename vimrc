@@ -61,6 +61,7 @@ Plug 'plasticboy/vim-markdown',        {'for': 'markdown'}
 Plug 'elixir-lang/vim-elixir'
 Plug 'chase/vim-ansible-yaml'
 Plug 'niquola/vim-hl7'
+Plug 'fatih/vim-go'
 
 " Ruby
 Plug 'tpope/vim-rbenv'
