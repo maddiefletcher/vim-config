@@ -761,7 +761,7 @@ nnoremap <C-n> :call NumberToggle()<cr>
 hi clear SignColumn
 
 " Set the Gutter to show all the time, avoiding the column 'pop' when saving
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
