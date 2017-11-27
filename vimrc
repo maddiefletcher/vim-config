@@ -29,6 +29,9 @@ Plug 'scrooloose/nerdtree'                   " Visualise the project directory a
 Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
 Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
 
+Plug '/usr/local/bin/fzf'
+Plug 'junegunn/fzf'                          " Fuzzy file finder
+
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
 Plug 'gregsexton/MatchTag'                   " Highlight the matching opening or closing tag in HTML/XML
@@ -103,6 +106,9 @@ Plug 'aklt/plantuml-syntax'
 
 " API Blueprint
 Plug 'kylef/apiblueprint.vim'
+
+" Restore sim session
+Plug 'tpope/vim-obsession'
 
 " Fun
 Plug 'johngrib/vim-game-code-break'
@@ -516,7 +522,7 @@ let g:splitjoin_align = 1
 " ----------------------------------------------
 
 let g:airline_powerline_fonts = 1
-let g:airline_section_z = '%c, %l/%L'
+let g:airline_section_z = airline#section#create(['%c, %l/%L ', '%{ObsessionStatus()}'])
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#syntastic#enabled = 1
