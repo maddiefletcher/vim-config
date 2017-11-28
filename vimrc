@@ -1,6 +1,8 @@
 set nocompatible
 call plug#begin('~/.vim/plugged')
 
+let s:darwin = has('mac')
+
 " ----------------------------------------------
 " Define all the plugins!
 " ----------------------------------------------
@@ -14,7 +16,7 @@ Plug 'tpope/vim-fugitive'                    " Awesome git plugin
 Plug 'vim-airline/vim-airline'               " Add a nicer status line
 Plug 'vim-airline/vim-airline-themes'        " Themes for Airline
 Plug 'christoomey/vim-tmux-navigator'        " Move between Vim panes & Tmux panes easily
-Plug 'colorizer'                             " Show the colour off Hex colour codes
+Plug 'lilydjwg/colorizer'                    " Show the colour off Hex colour codes
 Plug 'kien/rainbow_parentheses.vim'          " Colour in brachets in matching pairs
 Plug 'mhinz/vim-startify'                    " Start Vim with a more useful start screen
 Plug 'nathanaelkane/vim-indent-guides'       " Show indentation level guides
@@ -29,8 +31,8 @@ Plug 'scrooloose/nerdtree'                   " Visualise the project directory a
 Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
 Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
 
-Plug '/usr/local/bin/fzf'
-Plug 'junegunn/fzf'                          " Fuzzy file finder
+Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf.vim'                      " Fuzzy file finder
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
@@ -45,7 +47,7 @@ Plug 'AndrewRadev/switch.vim'                " Quickly switch programming constr
 Plug 'godlygeek/tabular'                     " Format lines into a table
 Plug 'junegunn/vim-easy-align'               " Fast alignment of lines based on preset rules
 Plug 'kana/vim-textobj-user'                 " Extend Vims text object
-Plug 'matchit.zip'                           " Extend % to match more text objects
+Plug 'tmhedberg/matchit'                     " Extend % to match more text objects
 Plug 'maxbrunsfeld/vim-yankstack'            " Paste text, then rotate though things yanked before/after
 Plug 'scrooloose/nerdcommenter'              " Quick toggle for code commenting
 Plug 'tpope/vim-abolish'                     " Allow smartcase substitution and search
@@ -54,6 +56,7 @@ Plug 'tpope/vim-surround'                    " Quick editing or insertion for su
 Plug 'tpope/vim-commentary'                  " Comment out lines for common file types
 
 " Snippets and autocomplete
+Plug 'SirVer/ultisnips'
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
 Plug 'tpope/vim-endwise'                     " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
 Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
@@ -72,7 +75,6 @@ Plug 'ecomba/vim-ruby-refactoring',    {'for': 'ruby'}
 Plug 'nelstrom/vim-textobj-rubyblock', {'for': 'ruby'}
 Plug 't9md/vim-ruby-xmpfilter',        {'for': 'ruby'}
 Plug 'vim-ruby/vim-ruby',              {'for': 'ruby'}
-Plug 'vroom',                          {'for': 'ruby'}
 Plug 'tpope/vim-cucumber'
 
 " CSS & HTML
@@ -86,7 +88,7 @@ Plug 'tpope/vim-haml',                 {'for': 'haml'}
 " Javascript
 Plug 'othree/yajs.vim',                {'for': 'javascript'}
 Plug 'mxw/vim-jsx',                    {'for': 'javascript.jsx'}
-Plug 'vim-coffee-script',              {'for': 'coffee'}
+Plug 'kchmck/vim-coffee-script',       {'for': 'coffee'}
 Plug 'moll/vim-node'
 
 " Editorconfig
@@ -305,12 +307,6 @@ nmap <silent> <Leader>sp :setlocal spell!<CR>
 
 "  <Leader>sw to strip whitespace off the ends
 nmap <silent> <Leader>sw :call StripTrailingWhitespace()<CR>
-
-"  <Leader>t to run all tests in the current file
-map <silent> <leader>t :VroomRunTestFile<CR>
-
-"  <Leader>t to run the tests in the scope nearest the cursor
-map <silent> <leader>T :VroomRunNearestTest<CR>
 
 "  <Leader>u to toggle undo history browser
 nnoremap <Leader>u :GundoToggle<CR>
@@ -774,11 +770,6 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_modified_removed = '~'
 let g:gitgutter_max_signs = 1000
 
-" Vroom settings
-let g:vroom_write_all = 1
-let g:vroom_cucumber_path = 'cucumber '
-let g:vroom_map_keys = 0
-
 " xmp-filter mappings
 autocmd FileType ruby nmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
 autocmd FileType ruby xmap <buffer> <Leader>X <Plug>(xmpfilter-mark)
@@ -826,3 +817,13 @@ let g:ragtag_global_maps = 1
 
 " Enable EditorConfig
 let g:EditorConfig_core_mode = 'external_command'
+
+
+" ----------------------------------------------
+"  Open file in sublime text
+" ----------------------------------------------
+if s:darwin
+  nnoremap <silent> <leader>sl
+  \ :call job_start(['/usr/local/bin/subl', expand('%:p')],
+  \ {'in_io': 'null', 'out_io': 'null', 'err_io': 'null'})<cr>
+endif
