@@ -57,6 +57,7 @@ Plug 'tpope/vim-commentary'                  " Comment out lines for common file
 
 " Snippets and autocomplete
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'                     " Make tab more useful in triggering Vim omni-complete
 Plug 'tpope/vim-endwise'                     " Automatically insert programming block endings (ie. `end` in Ruby, `endif` in VimL)
 Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML/XML tags
@@ -175,7 +176,9 @@ set wildmode=list:longest               " Shell-like behaviour for command autoc
 set fillchars+=vert:\                   " Set the window borders to not have | chars in them
 set mouse=a
 set clipboard=unnamed                   " Use the system clipboard
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 
 " -----------------------------------
 " Setup file wildcard ignored names
