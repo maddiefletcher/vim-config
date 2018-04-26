@@ -28,6 +28,7 @@ Plug 'jlanzarotta/bufexplorer'               " Show a sortable list of open buff
 Plug 'kien/ctrlp.vim'                        " Really powerful fuzzy finder for file names
 Plug 'rking/ag.vim'                          " Really fast search for text in all files
 Plug 'scrooloose/nerdtree'                   " Visualise the project directory and make it easy to navigate
+Plug 'francoiscabrol/ranger.vim'
 Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
 Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
 
