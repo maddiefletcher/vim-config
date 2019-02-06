@@ -41,7 +41,7 @@ Plug 'junegunn/fzf.vim'                      " Fuzzy file finder
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
-Plug 'gregsexton/MatchTag'                   " Highlight the matching opening or closing tag in HTML/XML
+"Plug 'gregsexton/MatchTag'                   " Highlight the matching opening or closing tag in HTML/XML
 " Plug 'ludovicchabant/vim-gutentags'          " Better automated generation and update of ctags files
 Plug 'majutsushi/tagbar'                     " Visualise and navigate all the ctags found in the current file
 Plug 'tpope/vim-projectionist'               " Map tools and actions based on the project
