@@ -823,10 +823,6 @@ endif
 " Enable ragtag XML tag mappings
 let g:ragtag_global_maps = 1
 
-" Enable EditorConfig
-let g:EditorConfig_core_mode = 'external_command'
-
-
 " ----------------------------------------------
 "  Open file in sublime text
 " ----------------------------------------------
