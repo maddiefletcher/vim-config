@@ -35,9 +35,9 @@ Plug 'scrooloose/nerdtree'                   " Visualise the project directory a
 Plug 'francoiscabrol/ranger.vim'
 Plug 'bogado/file-line'                      " Allow Vim to be opened with a fileline argument (ie. foo.txt:20)
 Plug 'tpope/vim-unimpaired'                  " Extra bindings for common buffer navigation
-
 Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                      " Fuzzy file finder
+Plug 'vim-scripts/PreciseJump'               " Jump to precise locations via _f or _F
 
 " Additional contextual information
 Plug 'AdamWhittingham/vim-copy-filename'     " Quick shortcuts for copying the file name, path and/or line number
@@ -69,11 +69,9 @@ Plug 'tpope/vim-ragtag'                      " Provide bindings for closing HTML
 
 " Extra syntax highlighting and language support
 Plug 'scrooloose/syntastic'                 " The Godfather of all syntax highlighting and checking
-Plug 'plasticboy/vim-markdown',        {'for': 'markdown'}
-Plug 'elixir-lang/vim-elixir'
-Plug 'chase/vim-ansible-yaml'
 Plug 'niquola/vim-hl7'
 Plug 'fatih/vim-go'
+Plug 'jparise/vim-graphql'
 
 " Ruby
 Plug 'tpope/vim-rbenv'
@@ -100,26 +98,14 @@ Plug 'moll/vim-node'
 " Editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-" Groovy
-Plug 'vim-scripts/groovy.vim',         {'for': 'groovy'}
-
-" Dash integration
-Plug 'rizzatti/dash.vim'
-
-" Varnish VCL
-Plug 'ClockworkNet/vim-vcl'
-
 " PlantUML
 Plug 'aklt/plantuml-syntax'
 
 " API Blueprint
-Plug 'kylef/apiblueprint.vim'
+"Plug 'kylef/apiblueprint.vim'
 
-" Restore sim session
+" Restore vim session
 Plug 'tpope/vim-obsession'
-
-" Fun
-Plug 'johngrib/vim-game-code-break'
 
 " Load any extra plugins specified in the home directory
 if filereadable(expand("~/.vim.plugins.local"))
@@ -164,7 +150,7 @@ scriptencoding utf-8
 set encoding=utf-8
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 set mousehide                           " Hide the mouse cursor when typing
-set nofoldenable                        " Disable all folding of content
+"set nofoldenable                        " Disable all folding of content
 set nowrap                              " Line wrapping off
 set number                              " line numbers
 set ruler                               " Ruler on
@@ -442,7 +428,7 @@ let g:startify_custom_header = [
 
 let g:startify_custom_footer = [
       \'',
-      \"   Mark's Vim Config: https://github.com/markpfletcher/vim-config",
+      \"   Maddie's Vim Config: https://github.com/maddiefletcher/vim-config",
       \"   Vim is charityware. Please read ':help uganda'",
       \]
 
@@ -473,8 +459,6 @@ autocmd User Startified setlocal buftype=
 " colorscheme solarized
 " Setup the projector toggle plugin
 let g:default_colorscheme = 'adCode'
-" let g:default_colorscheme = 'railscasts'
-" let g:default_colorscheme = 'solarized'
 let g:projector_colorscheme = 'mac-classic'
 
 " Setup Font
@@ -496,7 +480,7 @@ if version >= 730
 endif
 
 " Ignore blank lines when calculating indentaiton on ansible yml configs
-let g:ansible_options = {'ignore_blank_lines': 0}
+"let g:ansible_options = {'ignore_blank_lines': 0}
 
 " ----------------------------------------------
 " Setup CtrlP File Finder
@@ -788,7 +772,7 @@ autocmd FileType ruby xmap <buffer> <Leader>x <Plug>(xmpfilter-run)
 autocmd FileType ruby imap <buffer> <Leader>x <Plug>(xmpfilter-run)
 
 " Disable Markdown folding
-let g:vim_markdown_folding_disabled=1
+"let g:vim_markdown_folding_disabled=1
 
 " Don't report Angular ng-* attributes as errors in HTML
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
