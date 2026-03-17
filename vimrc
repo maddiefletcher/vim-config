@@ -168,7 +168,7 @@ set fillchars+=vert:\                   " Set the window borders to not have | c
 set mouse=a
 set clipboard=unnamed                   " Use the system clipboard
 if !has('nvim')
-    set ttymouse=xterm2
+    set ttymouse=sgr
 endif
 
 " -----------------------------------
